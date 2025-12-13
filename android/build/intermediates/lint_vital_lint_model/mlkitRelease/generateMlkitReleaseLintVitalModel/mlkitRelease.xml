@@ -1,0 +1,31 @@
+<variant
+    name="mlkitRelease"
+    package="org.reactnative.camera"
+    minSdkVersion="26"
+    targetSdkVersion="34"
+    mergedManifest="build\intermediates\merged_manifest\mlkitRelease\processMlkitReleaseManifest\AndroidManifest.xml"
+    manifestMergeReport="build\outputs\logs\manifest-merger-mlkit-release-report.txt"
+    proguardFiles="build\intermediates\default_proguard_files\global\proguard-android.txt-8.7.2"
+    partialResultsDir="build\intermediates\lint_vital_partial_results\mlkitRelease\lintVitalAnalyzeMlkitRelease\out">
+  <buildFeatures
+      namespacing="REQUIRED"/>
+  <sourceProviders>
+    <sourceProvider
+        manifests="src\main\AndroidManifest.xml"
+        javaDirectories="src\main\java;src\mlkit\java;src\release\java;src\mlkitRelease\java;src\main\kotlin;src\mlkit\kotlin;src\release\kotlin;src\mlkitRelease\kotlin"
+        resDirectories="src\main\res;src\mlkit\res;src\release\res;src\mlkitRelease\res"
+        assetsDirectories="src\main\assets;src\mlkit\assets;src\release\assets;src\mlkitRelease\assets"/>
+  </sourceProviders>
+  <testSourceProviders>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <artifact
+      classOutputs="build\intermediates\javac\mlkitRelease\compileMlkitReleaseJavaWithJavac\classes;build\intermediates\compile_r_class_jar\mlkitRelease\generateMlkitReleaseRFile\R.jar"
+      type="MAIN"
+      applicationId="org.reactnative.camera"
+      generatedSourceFolders="build\generated\ap_generated_sources\mlkitRelease\out;build\generated\source\buildConfig\mlkit\release"
+      generatedResourceFolders="build\generated\res\resValues\mlkit\release"
+      desugaredMethodsFiles="C:\Users\H6P9PA\.gradle\caches\8.10.2\transforms\8a6b0755274ba49bf2adb5412f248d57\transformed\D8BackportedDesugaredMethods.txt">
+  </artifact>
+</variant>
