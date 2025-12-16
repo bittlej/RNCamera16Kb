@@ -14,7 +14,7 @@ import com.google.mlkit.vision.text.Text;
 import com.google.mlkit.vision.text.Text.Line;
 import com.google.mlkit.vision.text.Text.TextBlock;
 import com.google.mlkit.vision.text.TextRecognizer;
-import com.google.mlkit.vision.text.TextRecognizerOptions;
+import com.google.mlkit.vision.text.TextRecognizerOptionsInterface;
 import com.google.mlkit.vision.text.TextRecognition;
 
 import org.reactnative.camera.utils.ImageDimensions;
@@ -72,7 +72,7 @@ public class TextRecognizerAsyncTask extends android.os.AsyncTask<Void, Void, Li
     if (isCancelled() || mDelegate == null) {
       return null;
     }
-    mTextRecognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS);
+    mTextRecognizer = TextRecognition.getClient(TextRecognizerOptionsInterface.DEFAULT_OPTIONS);
     RNFrame frame = RNFrameFactory.buildFrame(mImageData, mWidth, mHeight, mRotation);
     return mTextRecognizer.process(frame.getFrame()).getResult().getTextBlocks();
   }

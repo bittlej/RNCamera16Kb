@@ -17,7 +17,7 @@ import com.google.mlkit.vision.common.InputImage;
 import com.google.mlkit.vision.text.Text;
 import com.google.mlkit.vision.text.TextRecognizer;
 import com.google.mlkit.vision.text.TextRecognition;
-import com.google.mlkit.vision.text.TextRecognizerOptions;
+import com.google.mlkit.vision.text.TextRecognizerOptionsInterface;
 
 import org.reactnative.camera.utils.ImageDimensions;
 
@@ -71,7 +71,7 @@ public class TextRecognizerAsyncTask extends android.os.AsyncTask<Void, Void, Vo
       return null;
     }
 
-    TextRecognizer detector = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS);
+    TextRecognizer detector = TextRecognition.getClient(TextRecognizerOptionsInterface.DEFAULT_OPTIONS);
 
     InputImage image = InputImage.fromByteArray(mImageData, mWidth, mHeight, getFirebaseRotation(), InputImage.IMAGE_FORMAT_YV12);
     detector.process(image)
