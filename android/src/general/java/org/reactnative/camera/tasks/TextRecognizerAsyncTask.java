@@ -73,7 +73,7 @@ public class TextRecognizerAsyncTask extends android.os.AsyncTask<Void, Void, Li
     if (isCancelled() || mDelegate == null) {
       return null;
     }
-    mTextRecognizer = TextRecognition.getClient(TextRecognizerOptionsInterface.DEFAULT_OPTIONS);
+    mTextRecognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS);
     RNFrame frame = RNFrameFactory.buildFrame(mImageData, mWidth, mHeight, mRotation);
     return mTextRecognizer.process(frame.getFrame()).getResult().getTextBlocks();
   }
