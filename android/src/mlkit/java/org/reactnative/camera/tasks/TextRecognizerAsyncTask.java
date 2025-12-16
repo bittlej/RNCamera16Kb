@@ -70,8 +70,8 @@ public class TextRecognizerAsyncTask extends android.os.AsyncTask<Void, Void, Vo
     if (isCancelled() || mDelegate == null) {
       return null;
     }
-
-    TextRecognizer detector = TextRecognition.getClient(TextRecognizerOptionsInterface.DEFAULT_OPTIONS);
+	TextRecognizerOptionsInterface txtRecog;
+    TextRecognizer detector = TextRecognition.getClient(txtRecog);
 
     InputImage image = InputImage.fromByteArray(mImageData, mWidth, mHeight, getFirebaseRotation(), InputImage.IMAGE_FORMAT_YV12);
     detector.process(image)
